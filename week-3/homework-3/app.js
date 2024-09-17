@@ -8,7 +8,9 @@ function intrestCalc() {
   console.log("principle", principle);
   console.log("intrestRate", intrestRate);
   console.log("time", time);
-
-  document.querySelector("#results").innerHTML +=
-    "result: " + principle * (1 + intrestRate * time);
+  const total = principle * (1 + intrestRate * time);
+  const totalIntrest = principle * (intrestRate / 100) * time;
+  document.querySelector(
+    "#results"
+  ).innerHTML += `With a begining principle of $${principle} and with a growth rate of ${intrestRate}% for ${time} years, your total intrest will be $${totalIntrest} with a grand total of $${total}. <br/>`;
 }
