@@ -28,4 +28,4 @@ function addNewStudent() {
   }
 }
 
-document.getElementById("studentName").innerHTML +=
+// document.getElementById("studentName").innerHTML +=
