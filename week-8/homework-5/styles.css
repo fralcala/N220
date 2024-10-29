@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.startBox {
+  width: 500px;
+  height: 350px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+button {
+  width: 250px;
+  height: 70px;
+  border-radius: 5px;
+  font-size: 22px;
+}
+
+#story {
+  min-height: 500px;
+  background-color: rgb(51, 31, 6);
+  color: white;
+}
