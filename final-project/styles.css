@@ -54,6 +54,12 @@ button.blue {
   background-color: #8f91d6;
 }
 
-.done h4 {
+/* .done h4 {
   text-decoration: line-through;
+} */
+
+.banner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }

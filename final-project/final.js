@@ -35,25 +35,26 @@ function login() {
     alert("You need at leat one number and one uppercase letter");
   } else {
     section.innerHTML = "";
-    section.innerHTML += `<button onclick="addTask()">Add Task</button>`;
+    section.innerHTML += `
+    <div class="banner">
+      <h2>Welcome ${username.value}</h2>
+      <button onclick="logout()">Logout</button>
+    </div>
+    <button onclick="addTask()">Add Task</button>
+    `;
   }
 }
 
 let tasks = [];
 
 let taskId = 0;
-function showTasks() {
-  section.innerHTML = "";
-
-  myFriends.forEach(function (friend, friendIndex) {});
-}
 
 function addTask() {
   const addNewTask = prompt("Task name:");
   const newTask = document.createElement("div");
   newTask.classList.add("task");
   newTask.innerHTML += `
-  <h3>${addNewTask}</h3>
+  <h4 onclick="done(this)">${addNewTask}</h4>
   <button class="red" onclick="removeTask(this)">Remove</button>
   <button class="blue" onclick="renameTask()">Change Text</button>
   `;
@@ -63,6 +64,14 @@ function addTask() {
 
   section.appendChild(newTask);
   console.log(tasks);
+}
+
+function done(element) {
+  if (element.style.textDecoration !== "line-through") {
+    element.style.textDecoration = "line-through";
+  } else {
+    element.style.textDecoration = "none";
+  }
 }
 
 function removeTask(button) {
