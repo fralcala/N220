@@ -45,6 +45,10 @@ function login() {
   }
 }
 
+function logout() {
+  window.location.href = "index.html";
+}
+
 let tasks = [];
 
 let taskId = 0;
